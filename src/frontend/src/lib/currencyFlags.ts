@@ -1,0 +1,43 @@
+// Maps ISO 4217 currency codes to flag emojis
+const FLAG_MAP: Record<string, string> = {
+  USD: "🇺🇸",
+  EUR: "🇪🇺",
+  GBP: "🇬🇧",
+  JPY: "🇯🇵",
+  CNY: "🇨🇳",
+  CAD: "🇨🇦",
+  AUD: "🇦🇺",
+  CHF: "🇨🇭",
+  INR: "🇮🇳",
+  MXN: "🇲🇽",
+  BRL: "🇧🇷",
+  KRW: "🇰🇷",
+  SGD: "🇸🇬",
+  NOK: "🇳🇴",
+  SEK: "🇸🇪",
+  DKK: "🇩🇰",
+  NZD: "🇳🇿",
+  ZAR: "🇿🇦",
+  SAR: "🇸🇦",
+  AED: "🇦🇪",
+  TRY: "🇹🇷",
+  PLN: "🇵🇱",
+  CZK: "🇨🇿",
+  IDR: "🇮🇩",
+  ILS: "🇮🇱",
+  EGP: "🇪🇬",
+  NGN: "🇳🇬",
+  GHS: "🇬🇭",
+  COP: "🇨🇴",
+  PEN: "🇵🇪",
+  ARS: "🇦🇷",
+  CLP: "🇨🇱",
+  BSD: "🇧🇸",
+  BBD: "🇧🇧",
+  XCD: "🇦🇬",
+  KSH: "🇰🇪",
+};
+
+export function getCurrencyFlag(code: string): string {
+  return FLAG_MAP[code] || "🌐";
+}

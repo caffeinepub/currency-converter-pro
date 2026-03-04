@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* USA Patriotic Palette — OKLCH raw L C H values */
+    --usa-red-raw: 0.42 0.19 25;
+    --usa-white-raw: 1 0 0;
+    --usa-navy-raw: 0.26 0.07 260;
+    --usa-navy-light-raw: 0.34 0.07 260;
+    --usa-gold-raw: 0.8 0.14 80;
+    --usa-bg-raw: 0.965 0.006 260;
+
+    /* Shadcn semantic tokens — raw OKLCH (no wrapper) */
+    --background: 0.965 0.006 260;
+    --foreground: 0.18 0.055 260;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.055 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.055 260;
+    --primary: 0.26 0.07 260;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.94 0.012 260;
+    --secondary-foreground: 0.26 0.07 260;
+    --muted: 0.94 0.012 260;
+    --muted-foreground: 0.5 0.04 260;
+    --accent: 0.42 0.19 25;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.42 0.19 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.875 0.02 260;
+    --input: 0.875 0.02 260;
+    --ring: 0.26 0.07 260;
+    --chart-1: 0.42 0.19 25;
+    --chart-2: 0.26 0.07 260;
+    --chart-3: 0.8 0.14 80;
+    --chart-4: 0.58 0.12 260;
+    --chart-5: 0.52 0.16 25;
+    --sidebar: 0.26 0.07 260;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.42 0.19 25;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.34 0.07 260;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.34 0.07 260;
+    --sidebar-ring: 0.8 0.14 80;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Source Sans 3", "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+
+  .font-body {
+    font-family: "Source Sans 3", "Inter", system-ui, sans-serif;
+  }
+
+  /* USA stripe decoration */
+  .usa-stripes {
+    background: repeating-linear-gradient(
+      0deg,
+      oklch(0.42 0.19 25) 0px,
+      oklch(0.42 0.19 25) 8px,
+      oklch(1 0 0) 8px,
+      oklch(1 0 0) 16px
+    );
+  }
+
+  /* Stars decorative pattern */
+  .usa-stars {
+    background-image: radial-gradient(
+      circle,
+      oklch(0.8 0.14 80) 1px,
+      transparent 1px
+    );
+    background-size: 20px 20px;
+  }
+
+  /* Smooth result reveal */
+  @keyframes result-reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-result-reveal {
+    animation: result-reveal 0.3s ease-out forwards;
+  }
+}
