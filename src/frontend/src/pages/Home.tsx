@@ -25,7 +25,16 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+            {/* Left dollar bills */}
+            <div className="hidden lg:block flex-shrink-0">
+              <img
+                src="/assets/generated/dollar-bills-transparent.dim_400x300.png"
+                alt="Dollar Bills"
+                className="w-40 xl:w-48 h-auto drop-shadow-2xl rotate-[-6deg] hover:rotate-0 transition-transform duration-500"
+              />
+            </div>
+
             {/* USA Flag */}
             <div className="flex-shrink-0">
               <img
@@ -36,29 +45,55 @@ export default function Home() {
             </div>
 
             {/* Title */}
-            <div className="text-center sm:text-left">
-              <div className="flex items-center gap-2 justify-center sm:justify-start mb-2">
+            <div className="text-center sm:text-left flex-1">
+              <div className="flex items-center gap-2 justify-center sm:justify-start mb-1">
                 <span className="text-usa-gold text-lg tracking-widest select-none">
                   ★ ★ ★
                 </span>
               </div>
-              <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg">
+
+              <h1
+                style={{ fontFamily: "'Bebas Neue', cursive" }}
+                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-none tracking-wide drop-shadow-lg"
+              >
                 CURRENCY
                 <br />
                 <span className="text-usa-gold">CONVERTER</span>
                 <span className="text-white"> PRO</span>
               </h1>
-              <p className="mt-3 text-white/75 text-base sm:text-lg font-medium max-w-lg">
+
+              {/* FREE badge */}
+              <div className="mt-4 flex items-center gap-3 justify-center sm:justify-start">
+                <span
+                  style={{ fontFamily: "'Bebas Neue', cursive" }}
+                  className="inline-block bg-usa-gold text-usa-navy text-3xl sm:text-4xl lg:text-5xl px-5 py-1 rounded-lg shadow-lg tracking-widest"
+                >
+                  100% FREE
+                </span>
+                <span className="text-green-400 text-2xl sm:text-3xl">💵</span>
+              </div>
+
+              <p className="mt-3 text-white/80 text-base sm:text-lg font-medium max-w-lg">
                 Live Exchange Rates • 150+ World Currencies
               </p>
               <p className="mt-1 text-white/55 text-sm">
-                Free global currency conversion — simple enough for everyone
+                Simple enough for everyone — no sign-up, no cost, ever
               </p>
+
               <div className="flex items-center gap-2 justify-center sm:justify-start mt-3">
                 <span className="text-usa-gold text-lg tracking-widest select-none">
                   ★ ★ ★
                 </span>
               </div>
+            </div>
+
+            {/* Right dollar bills */}
+            <div className="hidden lg:block flex-shrink-0">
+              <img
+                src="/assets/generated/dollar-bills-transparent.dim_400x300.png"
+                alt="Dollar Bills"
+                className="w-40 xl:w-48 h-auto drop-shadow-2xl rotate-[6deg] hover:rotate-0 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
